@@ -1,17 +1,22 @@
 const List = (props) => {
   return (
-    <div className='mt-[32px] border border-black p-[8px] rounded-[8px]'>
-        <h2 className='font-bold mb-[8px]'>Todo list:</h2>
-
-        {props.data.length === 0 ? (
-          <p>Tidak ada data</p>
-        ) : props.data.map((item, index) => (
-          <div key={String(index)} className='mb-[4px] pb-[2px] border-b border-black'>
-            <p>{`${index + 1}. ${item}`}</p>
+    <div className="mt-[10px]">
+      {props.data.length === 0 ? (
+        <p className="bg-blue-700">Tidak ada data</p>
+      ) : (
+        props.data.map((item, index) => (
+          <div key={String(index)}>
+            <p className="bg-blue-700 py-1 px-2 rounded-3xl mb-2 shadow-md shadow-black flex justify-between">
+              {`${index + 1}. ${item}`}
+              <button className="bg-red-700 rounded-md px-1 text-sm">
+                Delete
+              </button>
+            </p>
           </div>
-        ))}
+        ))
+      )}
     </div>
-  )
+  );
 };
 
 export default List;
