@@ -1,7 +1,9 @@
 const Input = ({ onChange, value, onClick }) => {
   return (
     <div>
-      <h2 className="text-center text-3xl font-bold text-white">To Do List</h2>
+      <h2 className="text-center text-3xl font-bold text-white drop-shadow-md">
+        To Do List
+      </h2>
       <div className="flex items-center justify-center mt-[10px]">
         <input
           placeholder="Write here..."
